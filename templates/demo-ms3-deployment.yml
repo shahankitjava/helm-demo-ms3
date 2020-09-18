@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-ms3-pod
-        image: us.icr.io/ct-ticketing/demo-ms3:v1
+        image: shahankitturn/demo-ms3:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9999
