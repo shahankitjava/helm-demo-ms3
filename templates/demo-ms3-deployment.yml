@@ -16,9 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-ms3-pod
-        image: shahankitturn/demo-ms3:v1
+        image: shahankitturn/demo-ms3
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9999
-      imagePullSecrets:
-      - name: default-us-icr-io
