@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-demo-ms3-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helm-demo-ms3
+      component: arc-component
+  template:
+    metadata:
+      labels:
+        app: helm-demo-ms3
+        component: arc-component
+    spec:
+      containers:
+        - name: helm-demo-ms3-container
+          image: shahankitturn/demo-ms3
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9999
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "256m"
+            limits:
+              memory: "256Mi"
+              cpu: "256m"

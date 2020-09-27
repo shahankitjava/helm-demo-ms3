@@ -11,6 +11,7 @@ public class HelloController {
     @GetMapping(value = "/helm3/{id}")
     public @ResponseBody
     HelmResponse greet(@PathVariable String id) {
+        System.out.println("Helm-demo-ms3 called by ms 2");
         HelmResponse helmResponse = new HelmResponse();
         helmResponse.setWelcome("Helm Demo MS 3 : " + id);
         return helmResponse;

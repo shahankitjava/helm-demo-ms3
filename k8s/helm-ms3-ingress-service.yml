@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: helm-demo-ms3
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  namespace: default
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /helm3
+            backend:
+              serviceName: helm-demo-ms3-service
+              servicePort: 80
